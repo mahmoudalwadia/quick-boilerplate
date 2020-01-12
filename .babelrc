@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "next/babel",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "@zeit/next-typescript/babel"
+  ],
+  "plugins": [
+    "inline-react-svg",
+    [
+      "module-resolver",
+      {
+        "extentions": [".ts", ".tsx", ".js"],
+        "root": ["./"],
+        "alias": {
+          "@components": "./components",
+          "@typescript": "./typescript"
+        }
+      }
+    ]
+  ]
+}
